@@ -120,7 +120,7 @@ const Cart = ({ closeCart }: Props) => {
             style={{ textDecoration: discount ? "line-through" : "none" }}
           >
             {i18n.t("cartDrawer.totalPrice")}{" "}
-            {getTotalValue(cartProducts).toFixed(1)} €
+            {getTotalValue(cartProducts).toFixed(1)} CHF
           </Typography>
         </Box>
       )}

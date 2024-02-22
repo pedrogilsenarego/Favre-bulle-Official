@@ -77,7 +77,7 @@ const Product = () => {
               }}
             >
               <Typography style={{ fontSize: "20px" }}>
-                €{productData?.price?.toFixed(2) || "N.A."}
+                CHF {productData?.price?.toFixed(2) || "N.A."}
               </Typography>
               <Box
                 style={{

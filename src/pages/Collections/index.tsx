@@ -54,8 +54,8 @@ const Collections = () => {
           style={{
             display: "flex",
             width: "100%",
-            justifyContent: "center",
-            columnGap: "40px",
+            justifyContent: "space-between",
+
             marginTop: "80px",
             rowGap: "60px",
           }}
@@ -65,7 +65,7 @@ const Collections = () => {
               <Grid
                 item
                 xs={12}
-                md={2}
+                md={1}
                 style={{
                   display: "flex",
                   flexDirection: "column",
@@ -92,8 +92,10 @@ const Collections = () => {
                     alignItems: "center",
                   }}
                 >
-                  <Typography fontWeight={700}>€{product.model}</Typography>
-                  <Typography>€{product.price},00</Typography>
+                  <Typography fontWeight={700} textAlign={"center"}>
+                    {product.model}
+                  </Typography>
+                  <Typography>CHF {product.price},00</Typography>
                   <Button
                     fullWidth
                     darkenColors

@@ -3,8 +3,10 @@ import { routes } from "./routes";
 
 import MainLayout from "../layouts/MainLayout";
 import NotFound from "../pages/NotFound";
+import useScrollTop from "../hooks/useScrollTop";
 
 const AppRoutes = () => {
+  useScrollTop();
   const redirectRoute = () => {
     return "/";
   };

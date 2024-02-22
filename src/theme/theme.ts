@@ -62,7 +62,6 @@ export const theme = createTheme({
       textTransform: "none",
       fontSize: 16,
       color: Colors.blackish[400],
-      caretColor: "transparent",
     },
   },
   palette: {

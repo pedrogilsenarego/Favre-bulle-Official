@@ -133,6 +133,25 @@ export const content = {
         },
         shippingPolicies: {
           shippingPolicies: "Shipping Policies",
+          shipping: {
+            title: "Shipping",
+            text: "Within Switzerland, delivery time is usually 24 to 75 hours after the order is shipped, while foreign (US and Europe) shipments take 10 to 21 working days.  For an extra price, faster shipping can be applied.</br></br> We do not deliver to P.O. boxes. Orders with P.O. box addresses may be cancelled, as some courier services are unable to deliver to the specified location. </br></br> The messaging service is carried out with tracking control. Shipping shall be done with the use of UPS, DHL, and TNT. We have the express right to use any Courier service as we deem fit. </br></br> Due to shipping carrier restrictions, there are certain destinations that are not covered. For a comprehensive list of restricted countries, please refer to the FedEx Express list here. Please note that there are also shipping restrictions for Ukraine and Russia, where our shipping carriers currently cannot deliver our goods. </br> Please note that Shipping fees would be calculated together with your order price upon checkout."
+          },
+          internationalShipping: {
+            title: "International Shipping",
+            text: "Please keep in mind that shipping costs vary by country. You will see individual shipping prices for your order before you place it at checkout. For orders shipping outside of the Switzerland, we are not liable for any tariffs, customs, or taxes. Orders will not be dispatched until payment has been received.</br></br>Shipments to Russia require a commercial address (such as an office or company address) and cannot be shipped to a personal address. We reserve the right to cancel orders that do not comply with this requirement."
+          },
+          placeDelivery: {
+            title: "Place of delivery, deadlines and losses",
+            text: "Approximate delivery times are indicated in working days in the description of each product, although a delay in delivery will not be a reason for penalty.</br></br>   FAVRE-BULLE SARL will not be liable for errors caused in delivery when the delivery address entered by the User / Customer in the order form does not match the reality or has been missed.</br></br>Depending on the destination of the order can be used various ways or methods of shipping, each method and each destination have shipping times that are specified in the order confirmation process.</br></br>Deadlines may change for logistical reasons or for reasons of force majeure. In cases of delays in deliveries, FAVRE-BULLE SARL will inform its User/Customer, as soon as it has knowledge of them.</br></br>Each delivery is considered made from the moment the company makes the product available to the User / Customer, which is materialized through the control system used by the transport company.</br></br>Delays in delivery shall not be considered those cases in which the order has been made available to the User/Customer, by the transport company within the agreed time and could not be delivered for cause attributable to the User/Customer.</br></br>When the order leaves our warehouse, you will be sent an email notifying you that your order has been accepted and is being sent."
+          },
+          whenFails: {
+            title: "When delivery fails?",
+            text: "In the event of a failed delivery of any watch purchased from Favre-Bulle SARL, we are committed to ensuring customer satisfaction through the following options:",
+            text2: "</br><b>Investigation and Resolution:</b> The customer may opt to wait for Favre-Bulle SARL to conduct a thorough investigation with the courier service to determine the cause of the failed delivery. We will make every effort to resolve the issue in a timely manner and keep the customer informed throughout the process.</br></br><b>Refund:</b> Should the customer prefer not to wait for the investigation to conclude, or if the investigation determines that the watch cannot be delivered, the customer is entitled to a full refund of the purchase price. Refunds will be processed to the original method of payment within 21 business days.</br></br><b>Replacement:</b> Alternatively, the customer may choose to have a new watch sent to them at no additional cost. Favre-Bulle SARL will expedite the shipping of the replacement watch, subject to availability. In the event the original watch model is no longer available, the customer will be offered a selection of equivalent value watches to choose from.",
+            text3:"</br>Favre-Bulle SARL is dedicated to ensuring that all delivery issues are resolved to the satisfaction of our customers. Customers are encouraged to contact our customer service team immediately upon noticing any discrepancies or issues with their delivery."
+          }
+          
         },
         refundPolicies: {
           refundPolicies: "Refund Policies",

@@ -6,31 +6,118 @@ const ShippingPolicies = () => {
     <Box
       style={{ display: "flex", justifyContent: "center", margin: "0px 20px" }}
     >
-      <Box style={{ marginTop: "100px", maxWidth: "500px" }}>
-        <Typography
-          style={{
-            fontSize: "35px",
-            fontWeight: 800,
-            textAlign: "center",
-            lineHeight: "49px",
-          }}
-        >
-          {i18n.t("pages.shippingPolicies.shippingPolicies")}
-        </Typography>
-        <Typography
-          style={{
-            textAlign: "center",
-            marginTop: "20px",
-          }}
-        >
-          BA111OD may revise these Terms & conditions of use from time to time.
-          The Terms & Conditions in force at the time of purchase will apply to
-          the contract between you and BA111OD. You should therefore
-          occasionally visit this page to review the then current terms to which
-          you are bound. If you have any further questions do not hesitate to
-          contact us. We wish you an exciting experience with your new BA111OD
-          product.
-        </Typography>
+      <Box
+        style={{
+          marginTop: "100px",
+          maxWidth: "60%",
+          display: "flex",
+          flexDirection: "column",
+          rowGap: "40px",
+        }}
+      >
+        <div>
+          <Typography
+            style={{
+              fontSize: "35px",
+              fontWeight: 800,
+              textAlign: "center",
+              lineHeight: "49px",
+            }}
+          >
+            {i18n.t("pages.shippingPolicies.shipping.title")}
+          </Typography>
+          <Typography
+            style={{
+              textAlign: "justify",
+              marginTop: "20px",
+            }}
+            dangerouslySetInnerHTML={{
+              __html: i18n.t("pages.shippingPolicies.shipping.text"),
+            }}
+          />
+        </div>
+        <div>
+          <Typography
+            style={{
+              fontSize: "35px",
+              fontWeight: 800,
+              textAlign: "center",
+              lineHeight: "49px",
+            }}
+          >
+            {i18n.t("pages.shippingPolicies.internationalShipping.title")}
+          </Typography>
+          <Typography
+            style={{
+              textAlign: "justify",
+              marginTop: "20px",
+            }}
+            dangerouslySetInnerHTML={{
+              __html: i18n.t(
+                "pages.shippingPolicies.internationalShipping.text"
+              ),
+            }}
+          />
+        </div>
+        <div>
+          <Typography
+            style={{
+              fontSize: "35px",
+              fontWeight: 800,
+              textAlign: "center",
+              lineHeight: "49px",
+            }}
+          >
+            {i18n.t("pages.shippingPolicies.placeDelivery.title")}
+          </Typography>
+          <Typography
+            style={{
+              textAlign: "justify",
+              marginTop: "20px",
+            }}
+            dangerouslySetInnerHTML={{
+              __html: i18n.t("pages.shippingPolicies.placeDelivery.text"),
+            }}
+          />
+        </div>
+        <div>
+          <Typography
+            style={{
+              fontSize: "35px",
+              fontWeight: 800,
+              textAlign: "center",
+              lineHeight: "49px",
+            }}
+          >
+            {i18n.t("pages.shippingPolicies.whenFails.title")}
+          </Typography>
+          <Typography
+            style={{
+              textAlign: "justify",
+              marginTop: "20px",
+            }}
+            dangerouslySetInnerHTML={{
+              __html: i18n.t("pages.shippingPolicies.whenFails.text"),
+            }}
+          />
+          <Typography
+            style={{
+              textAlign: "justify",
+              marginLeft: "30px",
+            }}
+            dangerouslySetInnerHTML={{
+              __html: i18n.t("pages.shippingPolicies.whenFails.text2"),
+            }}
+          />
+          <Typography
+            style={{
+              textAlign: "justify",
+            }}
+            dangerouslySetInnerHTML={{
+              __html: i18n.t("pages.shippingPolicies.whenFails.text3"),
+            }}
+          />
+        </div>
       </Box>
     </Box>
   );

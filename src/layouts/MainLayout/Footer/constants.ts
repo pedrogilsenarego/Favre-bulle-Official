@@ -6,7 +6,8 @@ type Option = {
 };
 
 export const options: Option[] = [
-  { name: "Terms of service", link: ROUTE_PATHS.POLICIES },
+  { name: "Policies", link: ROUTE_PATHS.POLICIES },
+  { name: "Terms of service", link: ROUTE_PATHS.TERMS_OF_SERVICE },
   { name: "Shipping Policy", link: ROUTE_PATHS.SHIPPING_POLICIES },
   { name: "Return Policy", link: ROUTE_PATHS.REFUND_POLICIE },
   { name: "Cookie Policy", link: ROUTE_PATHS.DNA },

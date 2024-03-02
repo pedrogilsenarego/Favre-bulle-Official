@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import { i18n } from "../../translations/i18n";
 
-const RefundPolicies = () => {
+const Policies = () => {
   return (
     <Box
       style={{ display: "flex", justifyContent: "center", margin: "0px 20px" }}
@@ -365,4 +365,4 @@ const RefundPolicies = () => {
   );
 };
 
-export default RefundPolicies;
+export default Policies;

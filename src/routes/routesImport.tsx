@@ -25,4 +25,7 @@ export const RoutesI = {
   RefundPolicies: lazyWithRetryAndLoader(
     () => import("../pages/RefundPolicies")
   ),
+  TermsOfService: lazyWithRetryAndLoader(
+    () => import("../pages/TermsOfService")
+  ),
 };

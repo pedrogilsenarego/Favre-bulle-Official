@@ -79,4 +79,12 @@ export const routes: AppRoute[] = [
       </MainLayout>
     ),
   },
+  {
+    path: ROUTE_PATHS.TERMS_OF_SERVICE,
+    component: (
+      <MainLayout>
+        <RoutesI.TermsOfService />
+      </MainLayout>
+    ),
+  },
 ];

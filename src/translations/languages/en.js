@@ -304,7 +304,7 @@ export const content = {
       },
       technicalDetails: {
         description:
-          "CHPTR_Δ is the first BA111OD manufacture watch complication: a unique timepiece that represents time in a revolutionary way.</br></br>Rather than simply rotating a hand around a central axis, the movement was designed to 'roll' a satellite hour wheel around a fixed central hour wheel. When a wheel is rotated around another wheel, the trajectory described by any point on this satellite wheel is a cycloid. There are several types of cycloids: in this BA111OD chapter, the chosen cycloid is a deltoid (with a ratio of 1/3), and as a result, the trajectory described by the tip of the hour hand is... a triangle.</br></br> Created with the help of renowned watchmaker Olivier Mory, CHPTR_Δ's asymmetrical reading of time is a world premiere that promises to captivate and inspire anyone who seeks a new and unique way of reading time.",
+          "The Three Peaks limited edition features a cam actuated chronograph with perlage, cotes de Genève and heat blued steel screws. The timepiece is powered by a Sellita SW510B, an automatic movement well-known for its resistance and longevity.</br></br>The hands have been inspired by mountain peaks. The brushed and polished sub-dials have been designed to gently reflect light as you move your wrist. Both sit upon a grained and lacquered dial.</br></br>The Three Peaks line is limited to 100 pieces of each colour. Only 15 timepieces of the Three Peaks collection will be assembled in the mountains :",
         movement:
           "Automatic, SW510B, stop second device, power reserve 62 hours, 27 jewels.",
         functions:

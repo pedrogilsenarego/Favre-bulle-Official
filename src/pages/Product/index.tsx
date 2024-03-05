@@ -8,6 +8,7 @@ import Button from "../../components/Ui/Button";
 import { mainColors } from "../../theme/theme";
 import { i18n } from "../../translations/i18n";
 import useProduct from "./useProduct";
+import ToolTipJ from "../../components/Tooltip/Tooltip";
 
 const Product = () => {
   const {
@@ -76,9 +77,19 @@ const Product = () => {
                 rowGap: "20px",
               }}
             >
-              <Typography style={{ fontSize: "20px" }}>
-                CHF {productData?.price?.toFixed(2) || "N.A."}
-              </Typography>
+              <div style={{ cursor: "pointer" }}>
+                <ToolTipJ title={i18n.t("pages.myCollection.VAT")}>
+                  <Typography
+                    style={{
+                      fontSize: "20px",
+
+                      display: "inline-block",
+                    }}
+                  >
+                    CHF {productData?.price?.toFixed(2) || "N.A."}*
+                  </Typography>
+                </ToolTipJ>
+              </div>
               <Box
                 style={{
                   display: "flex",

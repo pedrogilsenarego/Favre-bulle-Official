@@ -127,6 +127,7 @@ export const content = {
         },
         myCollection: {
           edit: "Edit Information",
+          VAT: "VAT included",
         },
         policies: {
           termsOfService: "Terms of Service",

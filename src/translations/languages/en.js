@@ -125,9 +125,14 @@ export const content = {
           theBrand: "The brand",
           theLogo: "The logo",
         },
+
         myCollection: {
           edit: "Edit Information",
           VAT: "VAT included",
+          warrenty: "2 years international warrenty",
+          aftercareService:
+            "Our team would be delighted to assist with any after-care questions you may have",
+          return: "Free return within 14 days",
         },
         policies: {
           termsOfService: "Terms of Service",

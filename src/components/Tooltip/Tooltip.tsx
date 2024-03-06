@@ -6,11 +6,18 @@ interface Props extends TooltipProps {
   children: any;
   title: string;
   maxWidth?: number;
+  placement?: any;
 }
 
-const ToolTipJ = ({ children, title, maxWidth }: Props) => {
+const ToolTipJ = ({
+  children,
+  title,
+  maxWidth,
+  placement = "right-end",
+  ...props
+}: Props) => {
   const HtmlTooltip = styled(({ className, ...props }: TooltipProps) => (
-    <Tooltip {...props} classes={{ popper: className }} placement="right-end" />
+    <Tooltip {...props} classes={{ popper: className }} placement={placement} />
   ))(({ theme }) => ({
     [`& .${tooltipClasses.tooltip}`]: {
       backgroundColor: "white",
@@ -18,7 +25,7 @@ const ToolTipJ = ({ children, title, maxWidth }: Props) => {
       color: Colors.blackish[400],
       maxWidth: maxWidth ?? 400,
       fontSize: "14px",
-      border: `2px solid ${Colors.blackish[400]}`,
+      border: `1px solid ${Colors.blackish[400]}`,
       fontWeight: "inherit",
     },
     [`& .${tooltipClasses.arrow}`]: {

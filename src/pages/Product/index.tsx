@@ -9,6 +9,9 @@ import { mainColors } from "../../theme/theme";
 import { i18n } from "../../translations/i18n";
 import useProduct from "./useProduct";
 import ToolTipJ from "../../components/Tooltip/Tooltip";
+import Warrenty from "../../assets/labullealex_Warranty.svg";
+import AfterCare from "../../assets/labullealex_Aftercare Service.svg";
+import ReturnPolicy from "../../assets/labullealex_Return policy.svg";
 
 const Product = () => {
   const {
@@ -116,32 +119,40 @@ const Product = () => {
               <Box
                 style={{
                   display: "flex",
-                  columnGap: "6px",
-                  alignItems: "center",
+
+                  justifyContent: "space-around",
                 }}
               >
-                <Icons.Droplet size="26px" color={mainColors.primary[400]} />
-                <Typography>Free World Shipping</Typography>
-              </Box>
-              <Box
-                style={{
-                  display: "flex",
-                  columnGap: "6px",
-                  alignItems: "center",
-                }}
-              >
-                <Icons.Dial size="26px" color={mainColors.primary[400]} />
-                <Typography>Free Return in 14 days</Typography>
-              </Box>{" "}
-              <Box
-                style={{
-                  display: "flex",
-                  columnGap: "6px",
-                  alignItems: "center",
-                }}
-              >
-                <Icons.Edit size="26px" color={mainColors.primary[400]} />
-                <Typography>2 years of internation warrenty</Typography>
+                <ToolTipJ
+                  title={i18n.t("pages.myCollection.warrenty")}
+                  placement="bottom"
+                >
+                  <img
+                    src={Warrenty}
+                    alt=""
+                    style={{ height: "80px", cursor: "pointer" }}
+                  />
+                </ToolTipJ>
+                <ToolTipJ
+                  title={i18n.t("pages.myCollection.aftercareService")}
+                  placement="bottom"
+                >
+                  <img
+                    src={AfterCare}
+                    alt=""
+                    style={{ height: "80px", cursor: "pointer" }}
+                  />
+                </ToolTipJ>
+                <ToolTipJ
+                  title={i18n.t("pages.myCollection.return")}
+                  placement="bottom"
+                >
+                  <img
+                    src={ReturnPolicy}
+                    alt=""
+                    style={{ height: "80px", cursor: "pointer" }}
+                  />
+                </ToolTipJ>
               </Box>
             </Box>
             <Box style={{ marginTop: "20px" }}>

@@ -12,6 +12,11 @@ import ToolTipJ from "../../components/Tooltip/Tooltip";
 import Warrenty from "../../assets/labullealex_Warranty.svg";
 import AfterCare from "../../assets/labullealex_Aftercare Service.svg";
 import ReturnPolicy from "../../assets/labullealex_Return policy.svg";
+import Dimensions from "../../assets/labullealex_Dimensions.svg";
+import Glass from "../../assets/labullealex_Glass.svg";
+import Case from "../../assets/labullealex_Case.svg";
+import Movement from "../../assets/labullealex_Movement.svg";
+import Strap from "../../assets/labullealex_Strap.svg";
 
 const Product = () => {
   const {
@@ -20,6 +25,7 @@ const Product = () => {
     handleProductToCart,
     mainImage,
     setMainImage,
+    mobile,
   } = useProduct();
   return isLoadingProduct ? (
     <Loader />
@@ -130,7 +136,7 @@ const Product = () => {
                   <img
                     src={Warrenty}
                     alt=""
-                    style={{ height: "80px", cursor: "pointer" }}
+                    style={{ height: "100px", cursor: "pointer" }}
                   />
                 </ToolTipJ>
                 <ToolTipJ
@@ -140,7 +146,7 @@ const Product = () => {
                   <img
                     src={AfterCare}
                     alt=""
-                    style={{ height: "80px", cursor: "pointer" }}
+                    style={{ height: "100px", cursor: "pointer" }}
                   />
                 </ToolTipJ>
                 <ToolTipJ
@@ -150,34 +156,71 @@ const Product = () => {
                   <img
                     src={ReturnPolicy}
                     alt=""
-                    style={{ height: "80px", cursor: "pointer" }}
+                    style={{ height: "100px", cursor: "pointer" }}
                   />
                 </ToolTipJ>
               </Box>
             </Box>
             <Box style={{ marginTop: "20px" }}>
               <Accordion title="Technical Specifications">
-                <Box>
-                  <Typography>Movement</Typography>
-                  <Typography>{i18n.t("technicalDetails.movement")}</Typography>
-                </Box>
-                <Box>
-                  <Typography>Functions</Typography>
+                <Box style={{ display: "flex", alignItems: "center" }}>
+                  <img
+                    src={Dimensions}
+                    alt=""
+                    style={{
+                      height: mobile ? "60px" : "80px",
+                      cursor: "pointer",
+                    }}
+                  />
                   <Typography>
-                    {i18n.t("technicalDetails.functions")}
+                    {i18n.t("pages.myCollection.dimensions")}
                   </Typography>
                 </Box>
-                <Box>
-                  <Typography>Case</Typography>
-                  <Typography>{i18n.t("technicalDetails.case")}</Typography>
+                <Box style={{ display: "flex", alignItems: "center" }}>
+                  <img
+                    src={Glass}
+                    alt=""
+                    style={{
+                      height: mobile ? "60px" : "80px",
+                      cursor: "pointer",
+                    }}
+                  />
+                  <Typography>{i18n.t("pages.myCollection.glass")}</Typography>
                 </Box>
-                <Box>
-                  <Typography>Strap</Typography>
-                  <Typography>{i18n.t("technicalDetails.strap")}</Typography>
+                <Box style={{ display: "flex", alignItems: "center" }}>
+                  <img
+                    src={Case}
+                    alt=""
+                    style={{
+                      height: mobile ? "60px" : "80px",
+                      cursor: "pointer",
+                    }}
+                  />
+                  <Typography>{i18n.t("pages.myCollection.case")}</Typography>
                 </Box>
-                <Box>
-                  <Typography>Dial</Typography>
-                  <Typography>{i18n.t("technicalDetails.dial")}</Typography>
+                <Box style={{ display: "flex", alignItems: "center" }}>
+                  <img
+                    src={Movement}
+                    alt=""
+                    style={{
+                      height: mobile ? "60px" : "80px",
+                      cursor: "pointer",
+                    }}
+                  />
+                  <Typography>
+                    {i18n.t("pages.myCollection.movement")}
+                  </Typography>
+                </Box>
+                <Box style={{ display: "flex", alignItems: "center" }}>
+                  <img
+                    src={Strap}
+                    alt=""
+                    style={{
+                      height: mobile ? "60px" : "80px",
+                      cursor: "pointer",
+                    }}
+                  />
+                  <Typography>{i18n.t("pages.myCollection.strap")}</Typography>
                 </Box>
               </Accordion>
             </Box>

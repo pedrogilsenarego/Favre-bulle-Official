@@ -133,6 +133,13 @@ export const content = {
           aftercareService:
             "Our team would be delighted to assist with any after-care questions you may have",
           return: "Free return within 14 days",
+          dimensions:
+            "Diameter : 42.5mm; Lug to lug : 50mm; Thickness : XXmm; Between lugs : 21mm",
+          glass: "Double sapphire crystal with antireflective coating",
+          case: "316L Stainless Steel Polished and brushed Open caseback 10ATM/100m waterproof",
+          movement:
+            "Sellita SW510b movement Perlage, cote de Genève and heat blued screws Cam actuated chronograph Automatic winding Power reserve : 62 hours",
+          strap: "110/70 Suede strap Quick release pins Signed folding clasp",
         },
         policies: {
           termsOfService: "Terms of Service",

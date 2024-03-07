@@ -13,7 +13,7 @@ const ToolTipJ = ({
   children,
   title,
   maxWidth,
-  placement = "right-end",
+  placement = "right",
   ...props
 }: Props) => {
   const HtmlTooltip = styled(({ className, ...props }: TooltipProps) => (
@@ -25,22 +25,28 @@ const ToolTipJ = ({
       color: Colors.blackish[400],
       maxWidth: maxWidth ?? 400,
       fontSize: "14px",
-      border: `1px solid ${Colors.blackish[400]}`,
+      padding: "16px",
+      boxShadow: `2px 2px 6px ${Colors.black[40025]}`,
       fontWeight: "inherit",
     },
     [`& .${tooltipClasses.arrow}`]: {
-      color: Colors.blackish[400],
+      color: Colors.black[40025],
     },
   }));
   return (
     <HtmlTooltip
-      arrow
+      //arrow
       title={
         <span
           dangerouslySetInnerHTML={{ __html: title }}
           style={{
             whiteSpace: "pre-line",
             color: Colors.blackish[400],
+            lineHeight: "22px",
+            fontSize: "16px",
+            letterSpacing: "1px",
+            textTransform: "capitalize",
+            textAlign: "justify",
           }}
         />
       }

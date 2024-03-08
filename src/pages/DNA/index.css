@@ -36,8 +36,24 @@
   );
 }
 
-.mainTypo {
+.boxText {
   width: 820px;
-  margin-top: 150px;
-  font-size: 80px;
+  
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.mainTypo {
+ margin-top: 30px;
+  font-size: 23px;
+  font-weight: 300;
+}
+
+.title {
+  
+  text-align: center;
+  
+  font-size: 30px;
 }

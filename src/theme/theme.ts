@@ -37,6 +37,7 @@ export const Colors = {
     400: "#1A2032",
     40005: "#1A20320D",
     40025: "#1A203240",
+    40060: "#1A203266",
     40080: "#1A2032CC",
   },
 };
@@ -46,6 +47,7 @@ export const mainColors = {
     400: Colors.blackish[400],
     40005: Colors.blackish[40005],
     40025: Colors.blackish[40025],
+    40060: Colors.blackish[40060],
     40080: Colors.blackish[40080],
   },
   secondary: {

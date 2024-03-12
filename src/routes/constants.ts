@@ -16,4 +16,5 @@ export const ROUTE_PATHS = {
   TERMS_OF_SERVICE: "/terms-of-service",
   SHIPPING_POLICIES: "/shipping-policies",
   REFUND_POLICIE: "/refund-policies",
+  TEASER: "/teaser",
 };

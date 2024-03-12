@@ -8,6 +8,14 @@ import { AppRoute } from "./types";
 export const routes: AppRoute[] = [
   ...subpagesRoutes,
   {
+    path: ROUTE_PATHS.TEASER,
+    component: (
+      <MainLayout>
+        <RoutesI.Teaser />
+      </MainLayout>
+    ),
+  },
+  {
     path: ROUTE_PATHS.HOME,
     component: (
       <MainLayout>

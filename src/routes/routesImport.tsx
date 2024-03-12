@@ -1,6 +1,7 @@
 import { lazyWithRetryAndLoader } from "../utils/lazyWithRetry";
 
 export const RoutesI = {
+  Teaser: lazyWithRetryAndLoader(() => import("../pages/Teaser")),
   Home: lazyWithRetryAndLoader(() => import("../pages/Home")),
   AdminManageProducts: lazyWithRetryAndLoader(
     () => import("../pages/Admin/ManageProducts")

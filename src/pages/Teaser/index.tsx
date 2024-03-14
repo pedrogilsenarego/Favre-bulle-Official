@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
 import Watch from "../../assets/54.png";
 import { useEffect, useState } from "react";
 import { Colors } from "../../theme/theme";
@@ -9,6 +9,8 @@ import { i18n } from "../../translations/i18n";
 import Button from "../../components/Ui/Button";
 
 const Teaser = () => {
+  const Theme = useTheme();
+  const mobile = useMediaQuery(Theme.breakpoints.down("sm"));
   const classes = useStyles();
   const { control, handleSubmit, onSubmit } = useTeaser();
   const targetDate = new Date("September 10, 2024 00:00:00");
@@ -52,28 +54,32 @@ const Teaser = () => {
         flexDirection: "column",
       }}
     >
-      <img
-        src={Watch}
-        alt=""
-        style={{
-          position: "absolute",
-          left: "-400px",
-          width: "800px",
-          top: "100px",
-        }}
-      />
+      {mobile ? (
+        <img src={Watch} alt="" style={{ width: "80vw" }} />
+      ) : (
+        <img
+          src={Watch}
+          alt=""
+          style={{
+            position: "absolute",
+            left: "-400px",
+            width: "800px",
+            top: "100px",
+          }}
+        />
+      )}
       <Typography
         style={{
-          fontSize: "50px",
+          fontSize: mobile ? "20px" : "50px",
           textTransform: "uppercase",
-          marginTop: "100px",
+          marginTop: mobile ? "20px" : "100px",
         }}
       >
         Don't Miss the launch
       </Typography>
       <Typography
         style={{
-          fontSize: "40px",
+          fontSize: mobile ? "18px" : "40px",
           fontWeight: "bold",
         }}
       >
@@ -81,7 +87,7 @@ const Teaser = () => {
       </Typography>
       <Typography
         style={{
-          fontSize: "30px",
+          fontSize: mobile ? "18px" : "30px",
           marginTop: "40px",
           borderBottom: `solid 2px ${Colors.redish[400]}`,
         }}
@@ -90,6 +96,7 @@ const Teaser = () => {
         {remainingTime.minutes} minutes, {remainingTime.seconds} seconds
       </Typography>
       <form
+        style={{ marginTop: mobile ? "40px" : "100px" }}
         className={classes.form}
         id="login-in"
         onSubmit={handleSubmit(onSubmit)}
@@ -121,7 +128,7 @@ const Teaser = () => {
             type="submit"
             style={{ color: Colors.blackish[400] }}
           >
-            {i18n.t("pages.auth.login.login", "Login")}
+            Subscription
           </Button>
         </Box>
       </form>

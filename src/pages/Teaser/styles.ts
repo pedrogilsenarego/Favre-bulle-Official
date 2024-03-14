@@ -15,7 +15,6 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     rowGap: "40px",
-    marginTop: "100px",
   },
   inputBox: {
     display: "flex",

@@ -1,7 +1,7 @@
 export const publishableKey = "";
 
 export const publishableKeyTest =
-  "pk_test_51JVYiDAJkp7H04iOOXZ2UnP8mZrYzc7G7sdSAUqyFEFEhuaFuRQX8FWwhHxHT2VyiLwKfucVzg5cGhIjTVYoqDRf00bALgrQ4E";
+  "pk_test_51O9iBhFfAoxBbEvRUBn10e9FKhOeoueezqXwYoO06dzz87Hx6zMg08IrnEiRnpXmyEaETNceGg77VEw93z8AWjCq00YfDto8rU";
 
 export const stripeProduction =
   "https://us-central1-favre-bulle.cloudfunctions.net/api/payments/creditCard";

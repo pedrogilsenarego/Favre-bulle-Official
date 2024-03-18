@@ -1,4 +1,4 @@
-// const { sendEmail } = require("./sendEmail");
+const { sendEmail } = require("./sendEmail");
 const functions = require("firebase-functions");
 const express = require("express");
 const cors = require("cors");
@@ -37,8 +37,8 @@ app.post("/payments/creditCard", async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     line_items: lineItems,
     mode: "payment",
-    success_url: "http://localhost:3000/success",
-    cancel_url: "https://octo-mistic.com/cancel",
+    success_url: "https://favre-bulle.web.app/success",
+    cancel_url: "https://favre-bulle.web.app/no-success",
     metadata: values,
   });
 
@@ -49,41 +49,41 @@ app.post("/payments/creditCard", async (req, res) => {
   );
 });
 
-// app.post(
-//   "/webhook-test",
-//   express.raw({ type: "application/json" }),
-//   (request, response) => {
-//     const sig = request.headers["stripe-signature"];
+app.post(
+  "/webhook-test",
+  express.raw({ type: "application/json" }),
+  (request, response) => {
+    const sig = request.headers["stripe-signature"];
 
-//     let event;
+    let event;
 
-//     try {
-//       event = stripe.webhooks.constructEvent(
-//         request.rawBody,
-//         sig,
-//         process.env.STRIPE_WEBHOOK_SECRET_LIVE
-//       );
-//     } catch (err) {
-//       response.status(400).send(`Webhook Error: ${err.message}`);
-//       return;
-//     }
+    try {
+      event = stripe.webhooks.constructEvent(
+        request.rawBody,
+        sig,
+        process.env.STRIPE_WEBHOOK_SECRET_LIVE
+      );
+    } catch (err) {
+      response.status(400).send(`Webhook Error: ${err.message}`);
+      return;
+    }
 
-//     const dataObject = event.data.object;
+    const dataObject = event.data.object;
 
-//     // Handle the event
-//     switch (event.type) {
-//       case "checkout.session.completed":
-//         sendEmail(dataObject.metadata.email);
-//         break;
+    // Handle the event
+    switch (event.type) {
+      case "checkout.session.completed":
+        //sendEmail(dataObject.metadata.email);
+        break;
 
-//       default:
-//         console.log(`Unhandled event type ${event.type}`);
-//     }
+      default:
+        console.log(`Unhandled event type ${event.type}`);
+    }
 
-//     // Return a 200 response to acknowledge receipt of the event
-//     response.send();
-//   }
-// );
+    // Return a 200 response to acknowledge receipt of the event
+    response.send();
+  }
+);
 
 app.get("/test", (req, res) => {
   const userData = [{ teste: "teste" }, { teste: "teste" }];

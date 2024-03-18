@@ -9,6 +9,7 @@ export const RoutesI = {
   AdminCreateProduct: lazyWithRetryAndLoader(
     () => import("../pages/Admin/ManageProducts/CreateProduct")
   ),
+  Success: lazyWithRetryAndLoader(() => import("../pages/BuySuccess")),
   Login: lazyWithRetryAndLoader(() => import("../pages/Auth/Login")),
   Register: lazyWithRetryAndLoader(() => import("../pages/Auth/Register")),
   DNA: lazyWithRetryAndLoader(() => import("../pages/DNA")),

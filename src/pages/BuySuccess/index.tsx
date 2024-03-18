@@ -21,11 +21,11 @@ const BuySuccess = () => {
     >
       <Typography
         color={mainColors.primary[400]}
-        fontSize={mobile ? "2rem" : "3rem"}
+        fontSize={mobile ? "1rem" : "2rem"}
         fontWeight={800}
-        mt="80px"
+        mt={mobile ? "20px" : "80px"}
       >
-        Hello!!
+        Favre-Bulle thanks you for buying with us.
       </Typography>
       <Typography
         color={mainColors.primary[400]}
@@ -33,7 +33,7 @@ const BuySuccess = () => {
         fontWeight={800}
         mt={mobile ? "20px" : "80px"}
       >
-        Thanks for buying
+        We are most proud and happy to have you join to our team.
       </Typography>
     </Box>
   );

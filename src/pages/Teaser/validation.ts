@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { i18n } from "../../translations/i18n";
 
-export const CreateProductSchema = z.object({
+export const SubscribeSchema = z.object({
   email: z
     .string()
     .email({
@@ -16,20 +16,6 @@ export const CreateProductSchema = z.object({
         "The email is required"
       ),
     }),
-  password: z
-    .string({
-      required_error: i18n.t(
-        "pages.access.subpages.login.validation.passwordRequired",
-        "The password is required"
-      ),
-    })
-    .min(
-      3,
-      i18n.t(
-        "pages.access.subpages.login.validation.passwordShort",
-        "The password is to short"
-      )
-    ),
 });
 
-export type CreateProductSchemaType = z.infer<typeof CreateProductSchema>;
+export type SubscribeSchemaType = z.infer<typeof SubscribeSchema>;

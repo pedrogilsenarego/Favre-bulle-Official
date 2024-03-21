@@ -3,42 +3,53 @@ import { useMutation } from "@tanstack/react-query";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
-import { CreateProductSchema, CreateProductSchemaType } from "./validation";
+import { SubscribeSchema, SubscribeSchemaType } from "./validation";
 import { defaultValues } from "./constants";
-import { userServices } from "../../services/user.services";
-import { Login } from "../../types/user";
 
 const useTeaser = () => {
   const navigate = useNavigate();
 
-  const { reset, control, handleSubmit } = useForm<CreateProductSchemaType>({
-    resolver: zodResolver(CreateProductSchema),
+  const { reset, control, handleSubmit } = useForm<SubscribeSchemaType>({
+    resolver: zodResolver(SubscribeSchema),
     defaultValues,
   });
 
-  const { mutate: signInMutation, isLoading: isLogin } = useMutation(
-    userServices.loginUser,
-    {
-      onError: (error: any) => {
-        console.log("error", error);
-      },
-      onSuccess: (data: any) => {
-        reset();
-      },
-    }
-  );
+  // const { mutate: signInMutation, isLoading: isLogin } = useMutation(
+  //   Subscribe,
+  //   {
+  //     onError: (error: any) => {
+  //       console.log("error", error);
+  //     },
+  //     onSuccess: (data: any) => {
+  //       reset();
+  //     },
+  //   }
+  // );
 
-  const onSubmit: SubmitHandler<CreateProductSchemaType> = async (
-    formData: Login
-  ) => {
-    signInMutation(formData);
+  const onSubmit: SubmitHandler<SubscribeSchemaType> = async (formData: {
+    email: string;
+  }) => {
+    try {
+      const response = await fetch(
+        "https://us-central1-favre-bulle.cloudfunctions.net/api/payments/subscribe",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email: formData.email }),
+        }
+      );
+      console.log(response);
+    } catch (error) {
+      console.error("An error occurred:", error);
+    }
   };
   return {
     handleSubmit,
     onSubmit,
     control,
     navigate,
-    isLogin,
   };
 };
 

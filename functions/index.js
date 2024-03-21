@@ -88,6 +88,7 @@ app.post(
 
 app.post("/subscribe", async (req, res) => {
   const email = req.body.email;
+  console.log("email");
   const getRequestParams = (email) => {
     // get env variables
     const API_KEY = process.env.MAILCHIMP_API_KEY;
@@ -120,11 +121,13 @@ app.post("/subscribe", async (req, res) => {
       headers,
     };
   };
+
   try {
     const { url, data, headers } = getRequestParams(email);
 
-    console.log(url);
+    console.log(url, data, headers);
     const response = await axios.post(url, data, { headers });
+    console.log(response);
     // Success
     return new Response(JSON.stringify("Thank you for the subscription"), {
       status: 200,

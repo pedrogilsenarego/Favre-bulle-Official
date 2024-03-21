@@ -31,7 +31,7 @@ const useTeaser = () => {
   }) => {
     try {
       const response = await fetch(
-        "https://us-central1-favre-bulle.cloudfunctions.net/api/payments/subscribe",
+        "https://us-central1-favre-bulle.cloudfunctions.net/api/subscribe",
         {
           method: "POST",
           headers: {

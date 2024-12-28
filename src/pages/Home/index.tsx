@@ -2,10 +2,13 @@ import { Box, Container, Grid, Typography } from "@mui/material";
 import { useEffect, useRef } from "react";
 import Button from "../../components/Ui/Button";
 import { CSS, Colors, mainColors } from "../../theme/theme";
+import { useNavigate } from "react-router-dom";
+import { ROUTE_PATHS } from "../../routes/constants";
 
 const Home = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const videoUrl = "http://media.w3.org/2010/05/sintel/trailer.mp4";
+  const navigate = useNavigate();
   useEffect(() => {
     const video = videoRef.current;
     if (!video || !videoUrl) return;
@@ -22,7 +25,7 @@ const Home = () => {
     <>
       <Box
         style={{
-          backgroundImage: `url("https://images5.alphacoders.com/349/349432.jpg")`,
+          backgroundImage: `url("https://res.cloudinary.com/daantetcr/image/upload/v1735412046/favre-bulle/DSC01995_ppxvte.jpg")`,
           width: "100%",
           height: "90vh",
           backgroundSize: "cover",
@@ -46,12 +49,19 @@ const Home = () => {
               fontSize: "32px",
             }}
           >
-            Omega Seamaster
+            Favre-Bulle Three Peeks
           </Typography>
-          <Typography style={{ color: mainColors.primary[400] }}>
-            A watch to find the deeps of the ocean
+          <Typography
+            style={{ color: mainColors.primary[400], textAlign: "center" }}
+          >
+            A watch to ...
           </Typography>
-          <Button fullWidth darkenColors style={{ marginTop: "20px" }}>
+          <Button
+            fullWidth
+            darkenColors
+            style={{ marginTop: "20px" }}
+            onClick={() => navigate(ROUTE_PATHS.COLLECTIONS)}
+          >
             <Typography>Discover More</Typography>
           </Button>
         </Box>
@@ -111,7 +121,11 @@ const Home = () => {
                 a watch that was created to break wallsDiscover the story behind
                 the building of a watch that was created to break walls
               </Typography>
-              <Button darkenColors fullWidth>
+              <Button
+                darkenColors
+                fullWidth
+                onClick={() => navigate(ROUTE_PATHS.DNA)}
+              >
                 <Typography>Learn More</Typography>
               </Button>
             </Box>

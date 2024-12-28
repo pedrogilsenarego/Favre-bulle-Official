@@ -19,7 +19,7 @@ const Collections = () => {
     <Box>
       <Box
         style={{
-          backgroundImage: `url("https://ba111od.com/cdn/shop/files/IMG_3841.jpg?v=1668782447&width=1920")`,
+          backgroundImage: `url("https://res.cloudinary.com/daantetcr/image/upload/v1735412034/favre-bulle/DSC01938_cvcjnr.jpg")`,
           width: "100%",
           height: "500px",
           backgroundSize: "cover",

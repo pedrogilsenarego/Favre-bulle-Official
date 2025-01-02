@@ -89,9 +89,9 @@ const Home = () => {
             <Typography
               sx={{
                 textAlign: "center",
-                fontSize: "30px",
-                letterSpacing: "2px",
-                fontWeight: 600,
+                fontSize: "32px",
+                letterSpacing: "3px",
+                fontWeight: 500,
                 lineHeight: "38px",
                 fontFamily: "Urban",
               }}
@@ -124,7 +124,7 @@ const Home = () => {
             padding: "25px 25px",
             position: "absolute",
             bottom: "22%",
-            left: "50px",
+            right: "50px",
           }}
         >
           <Typography

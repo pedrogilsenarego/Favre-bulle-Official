@@ -13,6 +13,7 @@ import { setCookiePolicy } from "../../../redux/general/actions";
 import { Colors } from "../../../theme/theme";
 import { i18n } from "../../../translations/i18n";
 import { options } from "./constants";
+import ere from "../../../assets/teste.svg";
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -34,12 +35,54 @@ const Footer = () => {
       );
     }
   };
+  const hii = ["1", "1", "1", "1", "1", "1", "1", "1"];
   return (
     <Box style={{ backgroundColor: Colors.blackish[400] }}>
+      <Container
+        maxWidth="xl"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          rowGap: "20px",
+          padding: "50px",
+          columnGap: "10px",
+          alignItems: "center",
+        }}
+      >
+        <Typography
+          sx={{
+            color: "white",
+            opacity: 0.6,
+            textDecoration: "underline",
+            letterSpacing: "3px",
+          }}
+        >
+          Who is talking about us
+        </Typography>
+        <Box sx={{ display: "flex", columnGap: "30px" }}>
+          {hii.map((_, index) => {
+            return (
+              <img
+                key={index}
+                src={ere}
+                alt="logo"
+                style={{
+                  width: "80px",
+                  height: "80px",
+                  opacity: 0.6,
+                  color: "white",
+                  objectFit: "contain",
+                }}
+              />
+            );
+          })}
+        </Box>
+      </Container>
       <Container maxWidth="xl">
         <Box
           style={{
-            padding: "80px 0px",
+            padding: "20px 0px 80px 0px",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",

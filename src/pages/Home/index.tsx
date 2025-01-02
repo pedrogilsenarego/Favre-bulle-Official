@@ -60,11 +60,101 @@ const Home = () => {
           src="https://youtu.be/rfTJ_X2DR6Q"
           width="100%"
           height="100%"
-          style={{ backgroundColor: "red", objectFit: "cover" }}
+          style={{ objectFit: "cover" }}
         />
       </Box>
-
       <Container style={{ height: "100vh" }} maxWidth="xl">
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            height: "100%",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: "100px 0px",
+            width: "100%",
+          }}
+        >
+          <Box
+            sx={{
+              maxWidth: "700px",
+              display: "flex",
+              flexDirection: "column",
+              rowGap: "20px",
+            }}
+          >
+            <Typography sx={{ textAlign: "center", fontSize: "20px" }}>
+              Press Corner
+            </Typography>
+            <Typography
+              sx={{
+                textAlign: "center",
+                fontSize: "30px",
+                letterSpacing: "2px",
+                fontWeight: 600,
+                lineHeight: "38px",
+                fontFamily: "Urban",
+              }}
+            >
+              "is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text ever since
+              the 1500s, when an unknown printer took a galley of type and
+              scrambled it to make a type specimen book. It has survived not
+              only five centuries, but also the leap into electronic
+              typesetting, remaining essentially unchanged. It was popularised
+              in the 1960s with the release of Letraset sheet"
+            </Typography>
+          </Box>
+        </Box>
+      </Container>
+
+      <Box
+        style={{
+          backgroundImage: `url("https://res.cloudinary.com/daantetcr/image/upload/v1735412046/favre-bulle/DSC01995_ppxvte.jpg")`,
+          width: "100%",
+          height: "90vh",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          position: "relative",
+        }}
+      >
+        <Box
+          style={{
+            backgroundColor: "white",
+            padding: "25px 25px",
+            position: "absolute",
+            bottom: "22%",
+            left: "50px",
+          }}
+        >
+          <Typography
+            style={{
+              color: mainColors.secondary[400],
+              letterSpacing: "1px",
+              fontSize: "32px",
+            }}
+          >
+            Favre-Bulle Three Peeks
+          </Typography>
+          <Typography
+            style={{ color: mainColors.primary[400], textAlign: "center" }}
+          >
+            A watch to ...
+          </Typography>
+          <Button
+            fullWidth
+            darkenColors
+            style={{ marginTop: "20px" }}
+            onClick={() => navigate(ROUTE_PATHS.COLLECTIONS)}
+          >
+            <Typography>Discover More</Typography>
+          </Button>
+        </Box>
+      </Box>
+      <Container
+        style={{ height: "100vh", marginBottom: "100px", marginTop: "100px" }}
+        maxWidth="xl"
+      >
         <Grid container height="100%">
           <Grid
             item
@@ -126,53 +216,10 @@ const Home = () => {
           </Grid>
         </Grid>
       </Container>
-      <Box
-        style={{
-          backgroundImage: `url("https://res.cloudinary.com/daantetcr/image/upload/v1735412046/favre-bulle/DSC01995_ppxvte.jpg")`,
-          width: "100%",
-          height: "90vh",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          position: "relative",
-        }}
-      >
-        <Box
-          style={{
-            backgroundColor: "white",
-            padding: "25px 25px",
-            position: "absolute",
-            bottom: "22%",
-            left: "50px",
-          }}
-        >
-          <Typography
-            style={{
-              color: mainColors.secondary[400],
-              letterSpacing: "1px",
-              fontSize: "32px",
-            }}
-          >
-            Favre-Bulle Three Peeks
-          </Typography>
-          <Typography
-            style={{ color: mainColors.primary[400], textAlign: "center" }}
-          >
-            A watch to ...
-          </Typography>
-          <Button
-            fullWidth
-            darkenColors
-            style={{ marginTop: "20px" }}
-            onClick={() => navigate(ROUTE_PATHS.COLLECTIONS)}
-          >
-            <Typography>Discover More</Typography>
-          </Button>
-        </Box>
-      </Box>
-      <Container
+      {/* <Container
         maxWidth="xl"
         sx={{
-          height: "100vh",
+          padding: "100px 0px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -200,7 +247,7 @@ const Home = () => {
             );
           })}
         </Grid>
-      </Container>
+      </Container> */}
     </>
   );
 };

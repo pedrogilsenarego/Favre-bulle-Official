@@ -58,3 +58,10 @@ input:-webkit-autofill:active {
   /*-webkit-box-shadow: 0 0 0 30px #898c90 inset !important;*/
   -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
+
+@font-face {
+  font-family: "Sweet";
+  src: url("/src/assets/fonts/SWEETSANSPROMEDIUM.OTF") format("OTF");
+  font-weight: 400;
+  font-style: normal;
+}

@@ -8,7 +8,11 @@ import ControlledFormInput from "../../components/Inputs/ControlledInput";
 import { i18n } from "../../translations/i18n";
 import Button from "../../components/Ui/Button";
 
-const Teaser = () => {
+const Teaser = ({
+  setOpenPopup,
+}: {
+  setOpenPopup: (signal: boolean) => void;
+}) => {
   const Theme = useTheme();
   const mobile = useMediaQuery(Theme.breakpoints.down("sm"));
   const classes = useStyles();
@@ -50,29 +54,14 @@ const Teaser = () => {
         width: "100%",
         display: "flex",
         alignItems: "center",
-        paddingBottom: "500px",
+        padding: "30px",
         flexDirection: "column",
       }}
     >
-      {mobile ? (
-        <img src={Watch} alt="" style={{ width: "80vw" }} />
-      ) : (
-        <img
-          src={Watch}
-          alt=""
-          style={{
-            position: "absolute",
-            left: "-400px",
-            width: "800px",
-            top: "100px",
-          }}
-        />
-      )}
       <Typography
         style={{
-          fontSize: mobile ? "20px" : "50px",
+          fontSize: mobile ? "20px" : "16px",
           textTransform: "uppercase",
-          marginTop: mobile ? "20px" : "100px",
         }}
       >
         Don't Miss the launch
@@ -87,8 +76,8 @@ const Teaser = () => {
       </Typography>
       <Typography
         style={{
-          fontSize: mobile ? "18px" : "30px",
-          marginTop: "40px",
+          fontSize: mobile ? "18px" : "20px",
+          marginTop: "20px",
           borderBottom: `solid 2px ${Colors.redish[400]}`,
         }}
       >

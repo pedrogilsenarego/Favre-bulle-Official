@@ -1,13 +1,16 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Button from "../../components/Ui/Button";
 import { CSS, Colors, mainColors } from "../../theme/theme";
 import { useNavigate } from "react-router-dom";
 import { ROUTE_PATHS } from "../../routes/constants";
 import Image1 from "../../assets/001_watch sketch 2D.png";
+import Teaser from "../Teaser";
+import Popup from "../../components/Popup";
 
 const Home = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [openPopup, setOpenPopup] = useState<boolean>(true);
   const videoUrl =
     "https://res.cloudinary.com/daantetcr/video/upload/v1735549363/favre-bulle/WhatsApp_Video_2024-12-29_at_18.22.36_4a5c13a6_vwsyms.mp4";
   const navigate = useNavigate();
@@ -216,6 +219,13 @@ const Home = () => {
           </Grid>
         </Grid>
       </Container>
+      <Popup
+        openPopup={openPopup}
+        setOpenPopup={setOpenPopup}
+        onClose={() => setOpenPopup(false)}
+      >
+        <Teaser setOpenPopup={setOpenPopup} />
+      </Popup>
       {/* <Container
         maxWidth="xl"
         sx={{
